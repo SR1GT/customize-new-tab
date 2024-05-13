@@ -1,0 +1,11 @@
+{
+  "name": "Customize New Tab",
+  "description": "Customize New Tab Page",
+  "version": "1.0",
+  "manifest_version": 2,
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "web_accessible_resources": [],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.baidu.com/sugrec; object-src 'self'"
+}

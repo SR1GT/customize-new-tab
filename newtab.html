@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="新标签页" />
+    <meta name="description" content="新标签页" />
+    <meta name="author" content="SR1GT" />
+    <title>新标签页</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link href="./assets/css/tailwind.min.css" rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: "CustomFont";
+        src: url("./assets/font/font.TTF");
+      }
+      body {
+        background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      header {
+        background: linear-gradient(
+          to top,
+          transparent 40%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+      }
+      footer {
+        background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+      }
+    </style>
+  </head>
+  <body>
+    <header class="h-[5vh] relative">
+      <div class="absolute top-0 right-0">
+        <img
+          src="./assets/svg/sun.svg"
+          alt="获取天气"
+          id="weather"
+          class="outline-none inline cursor-pointer"
+        />
+      </div>
+    </header>
+    <div class="h-[92vh] flex flex-col items-center position-relative">
+      <div
+        id="time"
+        class="mt-2 mb-7 text-[80px] text-white font-bold tracking-[10px]"
+        style="
+          font-family: 'CustomFont', sans-serif;
+          text-shadow: 2px 2px 2px #000000;
+        "
+      ></div>
+      <div>
+        <div class="px-8 bg-gray-600 border-2 rounded-full flex">
+          <select class="bg-gray-600 text-lg text-white outline-none">
+            <option value="www.baidu.com/s?wd=" selected>百度</option>
+            <option value="cn.bing.com/search?q=">必应</option>
+            <option value="search.bilibili.com/all?keyword=">哔哩哔哩</option>
+            <option value="github.com/search?q=">GitHub</option>
+            <option value="gitee.com/search?q=">Gitee</option>
+            <option value="zzk.cnblogs.com/s?w=">博客园</option>
+            <option value="so.csdn.net/so/search?q=">CSDN</option>
+            <option value="juejin.cn/search?query=">掘金</option>
+            <option value="bdfy">百度翻译</option>
+          </select>
+          <div class="border-l-2 mx-2 my-4"></div>
+          <input
+            class="w-[200px] md:w-[350px] lg:w-[650px] h-16 mx-6 text-2xl text-white outline-none bg-gray-600 duration-200 ease-linear transition-all"
+            type="text"
+            placeholder="请输入搜索内容"
+            autofocus
+          />
+          <div class="float-right text-2xl bg-grey-500 flex">
+            <img
+              src="./assets/svg/search.svg"
+              alt="开始搜索"
+              id="search"
+              class="outline-none"
+            />
+          </div>
+        </div>
+        <div
+          class="w-[200px] md:w-[350px] lg:w-[650px] mx-auto px-100 text-xl text-white outline-none bg-gray-600 duration-200 ease-linear transition-all"
+        >
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="h-[3vh] fixed bottom-0 w-full"
+      style="
+        font-family: 'CustomFont', sans-serif;
+        text-shadow: 2px 2px 2px #000000;
+      "
+    >
+      <div class="text-white text-center">Copyright © 2024 SR1GT</div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
